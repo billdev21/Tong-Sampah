@@ -1,6 +1,6 @@
 <?php include "header.php"; ?>
 
-        <div class="container" style="margin-top: 40px">
+        <div class="container" style="margin-top: 20px">
           <div class="row">            
               <?php if(isset($_GET['pesan']) != "" ): ?>
                 <div class="alert alert-danger" role="alert"><?php echo $_GET['pesan'] ?></div>                    

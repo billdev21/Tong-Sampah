@@ -6,6 +6,14 @@ $user=$_POST['user'];
 $pass=$_POST['pass'];
 $level=2;
 
+$nama=$_POST['nama'];
+$hp=$_POST['hp'];
+$alamat=$_POST['alamat'];
+$kec=$_POST['kec'];
+$kel=$_POST['kel'];
+
+
+
 
 //membuat angka acak tiket
 //fungsi nomor kode otomatis
