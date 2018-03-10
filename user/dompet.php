@@ -19,13 +19,25 @@
 			    	<th>E-tiket</th>
 			    	<th>Status</th>
 			    </tr>
+
+<?php
+$no=0;
+$s_sampah = "SELECT * FROM data_sampah";
+$q_sampah = mysqli_query($conn,$s_sampah);
+while ($td = mysqli_fetch_assoc($q_sampah)){
+$no++;
+?>
+
 			    <tr>
-			    	<td>1</td>
-			    	<td>plastik</td>
-			    	<td>5000</td>
-			    	<td>jsabdkajsdb080888</td>
-			    	<td>pending</td>
+			    	<td><?php echo $no; ?></td>
+			    	<td><?php echo $td['id_kat']; ?></td>
+			    	<td><?php echo $td['id_kat']; ?></td>
+			    	<td><?php echo $td['id_kat']; ?></td>
+			    	<td><?php echo $td['status']; ?></td>
 			    </tr>
+<?php
+}
+?>
 			  </table>
 			</div>
 		</div>

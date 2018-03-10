@@ -1,4 +1,6 @@
-<?php session_start() ?>
+<?php session_start();
+$id=1;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,12 +30,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.php">Beranda</a></li>
         <li><a href="tentang.php">Tentang</a></li>
-        <?php if($_SESSION['id'] == ""): ?>
-        <li><a href="login.php">Login or Register</a></li>
-        <?php endif ?>
-        <?php if($_SESSION['id'] != ""): ?>
-        <li><a href="user/">Profile</a></li> 
-        <?php endif ?>
+        <li><a href="login.php">Login or Register</a></li>        
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

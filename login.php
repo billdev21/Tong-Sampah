@@ -24,7 +24,7 @@
                       <label for="exampleInputPassword1">Password</label>
                       
                       <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                        <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pass" required>
                       </div>
                     </div>
