@@ -2,6 +2,8 @@
 include '../core/helper.php' ;
 include '../core/koneksi.php' ;
 
+
+
 cek_login();
 
 $s_usr = "SELECT * FROM user WHERE id_user=$id";

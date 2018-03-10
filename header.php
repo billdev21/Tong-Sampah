@@ -1,7 +1,8 @@
 <?php
 session_start();
-
+//include '../core/api.php' ;
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
