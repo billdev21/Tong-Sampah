@@ -45,7 +45,7 @@
 <div class="jumbotron" style="background: #f44949;">
 	<div class="container text-center" >
 		<h2>Aplikasi Yang Memudahkan Anda Dalam Pengelolaan Sampah Rumah Tangga</h2>
-		<button class="btn btn-success  btn-lg">Daftar Sekarang</button>
+		<button class="btn btn-success  btn-lg">Daftar Sekarang!</button>
 	</div>
 </div>
 
