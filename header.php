@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +28,19 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.php">Beranda</a></li>
         <li><a href="tentang.php">Tentang</a></li>
+        <?php if($_SESSION['id'] == ""): ?>
         <li><a href="login.php">Login or Register</a></li>
+        <?php endif ?>
+        <?php if($_SESSION['id'] != ""): ?>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="user/tambah_sampah.php">Tambah Sampah</a></li>
+            <li><a href="user/dompet.php">Dompet</a></li>
+            <li><a href="logout.php">Logout</a></li>
+          </ul>
+        </li> 
+        <?php endif ?>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

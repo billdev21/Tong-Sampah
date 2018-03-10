@@ -14,6 +14,6 @@ $result = mysqli_query($conn, $query);
 
 
 if($result){
-  
+  header("Location: ". BASE_URL. "/user/dompet.php");
 }
 
