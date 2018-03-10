@@ -1,20 +1,16 @@
 <?php include "header.php"; ?>
 
-
         <div class="clearfix"></div>
-        <div class="container" style="margin-top: 40px">
+        <div class="container" style="margin-top: 80px">
           <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-              <?php if(isset($_GET['pesan']) != "" ): ?>
-                <div class="alert alert-danger" role="alert"><?php echo $_GET['pesan'] ?></div>                    
-              <?php endif ?>
               
               <div class="panel panel-success">
-                <div class="panel-heading"><h1>Daftar</h1><span>Daftar disini, untuk menjadi kontributor sampah</span></div>
+                <div class="panel-heading"><h1>Tambah Driver</h1></div>
                 <div class="panel-body">
                   
-                  <form action="register_aksi.php" method="post">
+                  <form action="tambah_driver_aksi.php" method="post">
                     
                     <div class="form-group">
                       <label for="exampleInputName1">Username</label>
@@ -36,22 +32,15 @@
                     
                     <div class="checkbox">
                     </div>
-                    <button type="submit" class="btn btn-success">Daftar</button>
-                    
+                    <button type="submit" class="btn btn-success">Tambah Driver</button>
                     
                   </form>
-                  <hr>
-
-<a href="login.php" class="pull-right"><p>Ke Form Login</p></a>
                 </div>
                 
-
-
               </div>
             </div>
             
           </div>
         </div>
-
 
 <?php include "footer.php"; ?>
