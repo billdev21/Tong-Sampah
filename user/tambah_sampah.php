@@ -16,14 +16,15 @@
                       <div class="input-group">
                         <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></span>                    
 							
-						<select class="form-control">
-						<?php 
-							$query = mysqli_query($conn, "SELECT * FROM kategori");	
-							while($result = mysqli_fetch_array($query)): ?>	
-
-						  <option value="<?php echo $result['id_kat'] ?>"><?php echo $result['nama_kat'] ?></option>
-						<?php endwhile; ?>
-						</select>						
+            						<select class="form-control" name="id_kat">
+                          <option value=""> - </option>
+            						<?php 
+            							$query = mysqli_query($conn, "SELECT * FROM kategori");	
+            							while($result = mysqli_fetch_array($query)): ?>	
+                          
+            						  <option value="<?php echo $result['id_kat'] ?>"><?php echo $result['nama_kat'] ?></option>
+            						<?php endwhile; ?>
+            						</select>						
                         
                       </div>
                     </div>
@@ -33,6 +34,15 @@
                       <div class="input-group">
                         <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
                         <input type="text" class="form-control" id="exampleInputPassword1" placeholder="E-tiket" name="etiket" required>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Keterangan</label>
+                      
+                      <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Keterangan" name="ket" required>
                       </div>
                     </div>
                     

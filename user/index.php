@@ -1,4 +1,6 @@
 <?php include 'header.php' ?>
+<?php include "../core/helper.php"; ?>
+<?php cek_login(); ?>
 
 <div class="container">
 	<div class="row">

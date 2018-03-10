@@ -16,6 +16,8 @@
 <?php
 session_start();
 include "core/koneksi.php" ;
+include "core/helper.php";
+
 $user = $_POST['user'];
 $pass = $_POST['pass'];
 
@@ -24,6 +26,7 @@ $sql= "SELECT * FROM user where username='$user' and password='$pass'";
 $hasil = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($hasil);
 
+$id_user = $row['id_user'];
 $st = $row['level'];
 
 
@@ -32,13 +35,14 @@ if($st == 1){
     $_SESSION["id"]=$id_user;
     $_SESSION["username"]=$row['username'];
 }
-elseif($st==2){
-    header('Location: user/');
+elseif($st==2){    
     $_SESSION["id"]=$id_user;
     $_SESSION["username"]=$row['username'];
+
+    header('Location: '. BASE_URL. "/user");
 }
 elseif($st==3){
-    die('user');
+    die('driver');
     $_SESSION["id"]=$id_user;
     $_SESSION["username"]=$row['username'];
 }
