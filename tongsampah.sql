@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 10, 2018 at 02:33 PM
+-- Generation Time: Mar 10, 2018 at 11:23 PM
 -- Server version: 5.6.20-log
 -- PHP Version: 7.0.3
 
@@ -19,6 +19,22 @@ SET time_zone = "+00:00";
 --
 -- Database: `tongsampah`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `biodata`
+--
+
+CREATE TABLE IF NOT EXISTS `biodata` (
+`id_bio` int(10) NOT NULL,
+  `uniq` varchar(50) NOT NULL DEFAULT '0',
+  `nama` varchar(50) DEFAULT NULL,
+  `hp` varchar(50) DEFAULT NULL,
+  `alamat` text,
+  `kec` varchar(100) DEFAULT NULL,
+  `kel` varchar(100) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -72,24 +88,29 @@ INSERT INTO `kategori` (`id_kat`, `nama_kat`, `harga_kat`) VALUES
 
 CREATE TABLE IF NOT EXISTS `user` (
 `id_user` int(10) NOT NULL,
+  `uniq` varchar(50) NOT NULL DEFAULT '0',
   `username` varchar(50) DEFAULT NULL,
   `password` varchar(50) NOT NULL,
   `level` int(1) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `username`, `password`, `level`) VALUES
-(1, 'admin', 'admin', 1),
-(2, 'user', 'user', 2),
-(3, 'driver', 'driver', 3),
-(5, 'zein', 'zein', 2);
+INSERT INTO `user` (`id_user`, `uniq`, `username`, `password`, `level`) VALUES
+(1, '0', 'admin', 'admin', 1),
+(3, '0', 'driver', 'driver', 3);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `biodata`
+--
+ALTER TABLE `biodata`
+ ADD PRIMARY KEY (`id_bio`);
 
 --
 -- Indexes for table `data_sampah`
@@ -114,6 +135,11 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `biodata`
+--
+ALTER TABLE `biodata`
+MODIFY `id_bio` int(10) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `data_sampah`
 --
 ALTER TABLE `data_sampah`
@@ -127,7 +153,7 @@ MODIFY `id_kat` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
