@@ -8,7 +8,7 @@ $etiket = $_POST['etiket'];
 $ket = $_POST['ket'];
 $id_user = $_SESSION['id'];
 
-$query = "INSERT INTO data_sampah (id_kat, id_user, ket, etiket) VALUES ('$id_kat', '$id_user', '$ket', '$etiket') ";
+$query = "INSERT INTO data_sampah (id_kat, id_user, ket, etiket,berat,status) VALUES ('$id_kat', '$id_user', '$ket', '$etiket','0','0') ";
 $result = mysqli_query($conn, $query);
 
 

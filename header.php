@@ -1,5 +1,6 @@
-<?php session_start();
-$id=1;
+<?php
+session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

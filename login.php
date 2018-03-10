@@ -1,3 +1,4 @@
+
 <?php include "header.php"; ?>
 
         <div class="clearfix"></div>
@@ -6,8 +7,8 @@
             <div class="col-md-3"></div>
             <div class="col-md-6">
               
-              <div class="panel panel-success">
-                <div class="panel-heading"><h1>Masuk</h1></div>
+              <div class="panel panel-danger">
+                <div class="panel-heading"><h1>Masuk</h1><span>Silahkan login, isi username dan password yang sesuai.</span></div>
                 <div class="panel-body">
                   
                   <form action="login_aksi.php" method="post">
@@ -32,7 +33,7 @@
                     
                     <div class="checkbox">
                     </div>
-                    <button type="submit" class="btn btn-success">Masuk</button>
+                    <button type="submit" class="btn btn-danger">Masuk</button>
                     
                   </form>
 

@@ -1,14 +1,16 @@
 <?php include 'header.php' ?>
-<?php include "../core/helper.php"; ?>
-<?php cek_login(); ?>
 
-<div class="container">
+
+
+<div class="container" style="margin-top: 30px;">
+<div class="jumbotron text-center">
 	<div class="row">
-		<div class="col-md-6 col-md-offset-3" style="margin-top: 40px">
-			<h2>Klik Tombol Untuk Mengolah Sampah!</h2>
+		
+			<h2>Klik Tombol Untuk Request Jemput Sampah!</h2>
 			<a class="btn btn-primary btn-lg" href="tambah_sampah.php" role="button"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Tambah Sampah</a>
-		</div>
+		
 	</div>
 </div>	
+</div>
 
 <?php include 'footer.php' ?>

@@ -8,7 +8,7 @@
             <div class="col-md-6">
               
               <div class="panel panel-success">
-                <div class="panel-heading"><h1>Daftar</h1><span>Isi formulir pendaftaran dibawah ini</span></div>
+                <div class="panel-heading"><h1>Daftar</h1><span>Daftar disini, untuk menjadi kontributor sampah</span></div>
                 <div class="panel-body">
                   
                   <form action="register_aksi.php" method="post">
@@ -34,11 +34,16 @@
                     <div class="checkbox">
                     </div>
                     <button type="submit" class="btn btn-success">Daftar</button>
-                    <a href="login.php"><button type="button" class="btn btn-primary">Masuk</button></a>
+                    
                     
                   </form>
+                  <hr>
+
+<a href="login.php" class="pull-right"><p>Ke Form Login</p></a>
                 </div>
                 
+
+
               </div>
             </div>
             

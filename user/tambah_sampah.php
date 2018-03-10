@@ -51,7 +51,7 @@ $etiket=buatkode($nomor_terakhir, $tgl ,3);
 
                     
                     <div class="form-group">
-                      <label for="exampleInputName1">Kategori</label>
+                      <label for="exampleInputName1">Jenis Sampah</label>
                       
                       <div class="input-group">
                         <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></span>                    

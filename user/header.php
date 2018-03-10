@@ -1,4 +1,21 @@
-<?php include '../core/koneksi.php' ?>
+<?php 
+include '../core/helper.php' ;
+include '../core/koneksi.php' ;
+
+cek_login();
+
+$s_usr = "SELECT * FROM user WHERE id_user=$id";
+$q_usr = mysqli_query($conn,$s_usr);
+$td = mysqli_fetch_assoc($q_usr);
+$usr=ucfirst($td['username']);
+
+if($_SESSION['id'] == ""){
+    header("Location: ".BASE_URL. "/index.php");
+  }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,12 +46,12 @@
         <li><a href="../index.php">Beranda</a></li>
         <li><a href="#">Daftar Harga</a></li> 
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $usr;  ?> <span class="caret"></span></a>
 
           <ul class="dropdown-menu">
             <li><a href="tambah_sampah.php">Tambah Sampah</a></li>
             <li><a href="dompet.php">Dompet</a></li>
-            <li><a href="../logout.php">Logout</a></li>
+            <li><a href="../logout.php?x=ok">Logout</a></li>
           </ul>
         </li>     
               

@@ -38,7 +38,6 @@ if($st == 1){
 elseif($st==2){    
     $_SESSION["id"]=$id_user;
     $_SESSION["username"]=$row['username'];
-
     header('Location: '. BASE_URL. "/user");
 }
 elseif($st==3){

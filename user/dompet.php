@@ -1,6 +1,5 @@
+
 <?php include 'header.php' ?>
-<?php include "../core/helper.php"; ?>
-<?php cek_login(); ?>
 
 <div class="container">
 	<div class="row">
@@ -14,15 +13,15 @@
 			  <table class="table table-bordered">
 			    <tr>
 			    	<th>No</th>
-			    	<th>Kategori</th>
-			    	<th>Harga</th>
-			    	<th>E-tiket</th>
+			    	<th>E-Tiket</th>
+			    	<th>Jenis Sampah</th>
+			    	<th>Berat Sampah</th>
 			    	<th>Status</th>
 			    </tr>
 
 <?php
 $no=0;
-$s_sampah = "SELECT * FROM data_sampah";
+$s_sampah = "SELECT * FROM data_sampah,kategori WHERE data_sampah.id_kat=kategori.id_kat ";
 $q_sampah = mysqli_query($conn,$s_sampah);
 while ($td = mysqli_fetch_assoc($q_sampah)){
 $no++;
@@ -30,10 +29,18 @@ $no++;
 
 			    <tr>
 			    	<td><?php echo $no; ?></td>
-			    	<td><?php echo $td['id_kat']; ?></td>
-			    	<td><?php echo $td['id_kat']; ?></td>
-			    	<td><?php echo $td['id_kat']; ?></td>
-			    	<td><?php echo $td['status']; ?></td>
+			    	<td><?php echo $td['etiket']; ?></td>
+			    	<td><?php echo $td['nama_kat']; ?></td>
+			    	<td><?php echo $td['berat']; ?></td>
+			    	<td><?php 
+			    	$st=$td['status']; 
+
+			    	if($st==0){
+			    		echo "<button class='btn btn-danger btn-sm'>Tunda</button>";			    		
+			    	}else{
+			    		echo "<button class='btn btn-primary btn-sm'>Diterima</button>";
+			    	}
+			    	?></td>
 			    </tr>
 <?php
 }
