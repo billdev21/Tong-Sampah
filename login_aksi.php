@@ -30,14 +30,17 @@ $st = $row['level'];
 if($st == 1){
     die('admin');
     $_SESSION["id"]=$id_user;
+    $_SESSION["username"]=$row['username'];
 }
 elseif($st==2){
-    die('user');
+    header('Location: user/');
     $_SESSION["id"]=$id_user;
+    $_SESSION["username"]=$row['username'];
 }
 elseif($st==3){
     die('user');
     $_SESSION["id"]=$id_user;
+    $_SESSION["username"]=$row['username'];
 }
 else{
     die('gagal');
