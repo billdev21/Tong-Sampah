@@ -32,14 +32,7 @@
         <li><a href="login.php">Login or Register</a></li>
         <?php endif ?>
         <?php if($_SESSION['id'] != ""): ?>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="user/tambah_sampah.php">Tambah Sampah</a></li>
-            <li><a href="user/dompet.php">Dompet</a></li>
-            <li><a href="logout.php">Logout</a></li>
-          </ul>
-        </li> 
+        <li><a href="user/">Profile</a></li> 
         <?php endif ?>
       </ul>
     </div><!-- /.navbar-collapse -->
