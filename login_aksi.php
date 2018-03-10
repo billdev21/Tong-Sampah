@@ -16,19 +16,16 @@
 <?php
 session_start();
 include "core/koneksi.php" ;
-$var_user = $_POST['user'];
-$var_pass = $_POST['pass'];
+$user = $_POST['user'];
+$pass = $_POST['pass'];
 
-// $q = mysqli_query($conn, "select * from user where username='$user' and password ='$pass'");
-// $sql = mysqli_fetch_assoc($q);
+$sql= "SELECT * FROM user where username='$user' and password='$pass'";
 
-$sql= "select * from user where username='$user' and password ='$pass'";
+$hasil = mysqli_query($conn, $sql);
+$row = mysqli_fetch_array($hasil);
 
-$hasil = mysqli_query($conn,$sql);
-$hasil = mysqli_fetch_array($hasil);
+$st = $row['level'];
 
-die($hasil['level']);
-$st = $hasil['level'];
 
 if($st == 1){
     die('admin');
