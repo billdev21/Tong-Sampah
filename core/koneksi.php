@@ -2,15 +2,15 @@
 
 $host = "localhost";
 $user = "root";
-$password = "root";
-$database =  "tongsampah";
-
-$link = mysqli_connect($host, $user,$password, $database);
+$pass = "root";
+$db =  "tongsampah";
 
 
-if (!$link) {
-    echo "Error: Unable to connect to MySQL." . PHP_EOL;
-    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-    exit;
+// Create connection
+$conn = mysqli_connect($host, $user, $pass, $db);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
+?>
