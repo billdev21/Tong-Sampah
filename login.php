@@ -36,6 +36,10 @@
                     <button type="submit" class="btn btn-success">Masuk</button>
                     
                   </form>
+
+<hr>
+<a href="register.php">Daftar Sekarang</a>
+
                 </div>
                 
               </div>
