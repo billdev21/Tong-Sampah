@@ -51,7 +51,6 @@ if($_SESSION['id'] == ""){
 
           <ul class="dropdown-menu">
             <li><a href="tambah_sampah.php">Tambah Sampah</a></li>
-            <li><a href="dompet.php">Dompet</a></li>
             <li><a href="../logout.php?x=ok">Logout</a></li>
           </ul>
         </li>     
