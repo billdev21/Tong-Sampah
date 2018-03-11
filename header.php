@@ -37,15 +37,15 @@ include 'core/api.php' ;
       <?php endif ?>
       <?php if(isset($_SESSION['id'])): ?>
 
-        <?php if($_SESSION['level']) == 1: ?>
+        <?php if($_SESSION['level'] == 1): ?>
         <li><a href="admin/">Profile</a></li>
         <?php endif ?>
 
-        <?php if($_SESSION['level']) == 2: ?>
+        <?php if($_SESSION['level'] == 2 ): ?>
         <li><a href="user/">Profile</a></li>
         <?php endif ?>
 
-        <?php if($_SESSION['level']) == 3: ?>
+        <?php if($_SESSION['level'] == 3): ?>
         <li><a href="driver/">Profile</a></li>
         <?php endif ?>
 
