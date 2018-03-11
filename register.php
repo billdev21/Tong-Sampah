@@ -1,6 +1,8 @@
 <?php include "header.php"; ?>
 
-        <div class="container" style="margin-top: 20px">
+
+
+        <div class="container" style="margin-top: 40px">
           <div class="row">            
               <?php if(isset($_GET['pesan']) != "" ): ?>
                 <div class="alert alert-danger" role="alert"><?php echo $_GET['pesan'] ?></div>                    
@@ -62,9 +64,14 @@
                       <select name="kecamatan" class="form-control">
                         <option value="">Pilih Kecamatan</option>
                         <option value="">------------------</option>
-
-                        <option value="">kec</option>
-
+                        
+                        <?php 
+                          $data_kecamatan = get_kecamatan($token);
+                          $result = json_decode($data_kecamatan, 1);                          
+                          for ($i = 0; $i < count($result['data']); $i++):
+                        ?>
+                        <option value="<?php echo $result['data'][$i]['name']; ?>"><?php echo $result['data'][$i]['name']; ?></option>
+                        <?php endfor ?>
 
                       </select>
                     </div>
@@ -74,9 +81,14 @@
                       <select name="kecamatan" class="form-control">
                         <option value="">Pilih Kelurahan</option>
                         <option value="">------------------</option>
-
-                        <option value="">kel</option>
-
+                        
+                        <?php 
+                          $data_kelurahan = get_kelurahan($token);
+                          $result = json_decode($data_kelurahan, 1);                          
+                          for ($i = 0; $i < count($result['data']['data']); $i++):
+                        ?>
+                        <option value=""><?php echo $result['data']['data'][$i]['name'];  ?></option>
+                        <?php endfor ?>
 
                       </select>
                     </div>

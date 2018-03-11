@@ -30,6 +30,7 @@ function get_kecamatan_id($token, $id){
 }
 
 function get_kecamatan_name($token, $nama){
+	$nama = str_replace(" ", "%20", $nama);
 	return exec_curl($token, "http://api.samarindakota.go.id/api/v1/kecamatan?nama=$nama");	
 }
 
@@ -41,9 +42,10 @@ function get_kelurahan_id($token, $id){
 	return exec_curl($token, "http://api.samarindakota.go.id/api/v1/kelurahan?id=$id");
 }
 
-function get_kelurahan_nama($token, $nama){
+function get_kelurahan_name($token, $nama){
+	$nama = str_replace(" ", "%20", $nama);
 	return exec_curl($token, "http://api.samarindakota.go.id/api/v1/kelurahan?nama=$nama");
 }
 
-print_r( get_kelurahan($token));
+print_r( get_kelurahan_name($token, "lempake"));
 ?>
