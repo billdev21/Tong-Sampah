@@ -30,7 +30,7 @@ $no++;
 			    	<td><?php echo $td['ket']; ?></td>			    	
 			    	<td><?php echo $td['berat']; ?></td>
 			    	<td><?php 
-			    	$st=$td['status']; 
+			    	$st=$td['berat']; 
 
 			    	if($st==0){
 			    		echo "<button class='btn btn-danger btn-sm'>Tunda</button>";			    		
