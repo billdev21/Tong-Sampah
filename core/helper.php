@@ -5,7 +5,7 @@ if(isset($_SESSION['id'])){
 }
 
 
-define("BASE_URL", "http://localhost/TongSampah");
+define("BASE_URL", "http://localhost/Tong-Sampah");
 
 function cek_login(){
 	if($_SESSION['id'] == ""){

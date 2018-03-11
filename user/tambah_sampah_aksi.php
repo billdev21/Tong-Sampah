@@ -25,7 +25,7 @@ while ($driver = mysqli_fetch_array($q_sampah)){
 }
 
 $total = count($id_driver);
-$random = rand($id_driver[0], $total-5);
+$random = rand(0, $total-1);
 $id_driver = $id_driver[$random];
 
 
