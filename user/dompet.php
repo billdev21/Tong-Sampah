@@ -12,6 +12,7 @@
 			    	<th>Keterangan</th>
 
 			    	<th>Berat Sampah</th>
+			    	<th>Pendapatan</th>
 			    	<th>Status</th>
 			    </tr>
 
@@ -29,6 +30,13 @@ $no++;
 			    	<td><?php echo $td['nama_kat']; ?></td>
 			    	<td><?php echo $td['ket']; ?></td>			    	
 			    	<td><?php echo $td['berat']; ?></td>
+			    	<td>
+			    		<?php 
+			    			$hasil = $td['berat'] * $td['harga_kat'];
+			    			echo "Rp. ".number_format($hasil, 0,',', '.');
+			    		?>
+			    			
+			    	</td>
 			    	<td><?php 
 			    	$st=$td['status']; 
 
