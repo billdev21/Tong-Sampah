@@ -34,17 +34,20 @@ if($st == 1){
     
     $_SESSION["id"]=$id_user;
     $_SESSION["username"]=$row['username'];
+    $_SESSION["level"]=$row['level'];
     header('Location: '. BASE_URL. "/admin");
 }
 elseif($st==2){    
     $_SESSION["id"]=$id_user;
     $_SESSION["username"]=$row['username'];
+    $_SESSION["level"]=$row['level'];
     header('Location: '. BASE_URL. "/user");
 }
 elseif($st==3){
     
     $_SESSION["id"]=$id_user;
     $_SESSION["username"]=$row['username'];
+    $_SESSION["level"]=$row['level'];
     header('Location: '. BASE_URL. "/driver");
 }
 else{
