@@ -47,5 +47,5 @@ function get_kelurahan_name($token, $nama){
 	return exec_curl($token, "http://api.samarindakota.go.id/api/v1/kelurahan?nama=$nama");
 }
 
-print_r( get_kelurahan_name($token, "lempake"));
+// print_r( get_kelurahan_name($token, "lempake"));
 ?>
