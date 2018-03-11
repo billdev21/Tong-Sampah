@@ -1,6 +1,6 @@
 <?php include '../core/helper.php' ?>
 <?php include '../core/koneksi.php' ?>
-
+<?php is_admin() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

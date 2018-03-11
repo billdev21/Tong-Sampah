@@ -12,3 +12,9 @@ function cek_login(){
 		header("Location: ".BASE_URL. "/");
 	}
 }
+
+function is_admin(){
+	if($_SESSION['level'] != 1){
+		header("Location: ".BASE_URL. "/");
+	}	
+}
