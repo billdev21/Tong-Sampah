@@ -1,14 +1,14 @@
 <?php include "header.php"; ?>
 
-        <div class="clearfix"></div>
-        <div class="container" style="margin-top: 80px">
-          <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-              welcome <?php  echo $_SESSION['username'] ?>
+        <div class="container" style="margin-top: 30px">
+
+
+            <div class="jumbotron">
+              <h2>Hello! <?php  echo ucfirst($_SESSION['username']); ?></h2>
+
             </div>
             
           </div>
-        </div>
+
 
 <?php include "footer.php"; ?>
