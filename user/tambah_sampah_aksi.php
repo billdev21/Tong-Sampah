@@ -16,12 +16,6 @@ $id_user = $_SESSION['id'];
 // $driver=$driver['id_user'];
 
 
-
-$s_sampah = "SELECT id_user FROM user WHERE level=3 ORDER BY RAND() LIMIT 1";
-$q_sampah = mysqli_query($conn,$s_sampah);
-$td = mysqli_fetch_assoc($q_sampah);
-
-
 // get data driver
 $s_sampah = "SELECT * FROM user WHERE level=3";
 $q_sampah = mysqli_query($conn,$s_sampah);
@@ -31,7 +25,7 @@ while ($driver = mysqli_fetch_array($q_sampah)){
 }
 
 $total = count($id_driver);
-$random = rand(0, $total-1);
+$random = rand($id_driver[0], $total-1);
 $id_driver = $id_driver[$random];
 
 
