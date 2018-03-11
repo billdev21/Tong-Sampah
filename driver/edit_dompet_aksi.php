@@ -3,9 +3,10 @@
 
 <?php 
 
+$ido=$_POST['idorder'];
 $berat = $_POST['berat'];
 
-$query = "UPDATE data_sampah SET berat = $berat WHERE id_driver = $id";
+$query = "UPDATE data_sampah SET berat=$berat, status=1  WHERE id_sampah=$ido;";
 $result = mysqli_query($conn, $query);
 
 
