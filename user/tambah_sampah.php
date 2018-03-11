@@ -1,9 +1,9 @@
 
 <?php include 'header.php' ?>
 
-<div class="container">
+<div class="container" style="margin-top: 40px">
 	<div class="row">
-		<div class="col-md-6" style="margin-top: 40px">
+		<div class="col-md-4" >
 			<div class="panel panel-success">
                 <div class="panel-heading"><h1>Tambah Sampah</h1></div>
                 <div class="panel-body">
@@ -81,6 +81,10 @@ $etiket=create_random(4);
                 
               </div>
 		</div>
+
+    <div class="col-md-8">
+      <?php include_once "dompet.php"; ?>
+    </div>
 	</div>
 </div>	
 

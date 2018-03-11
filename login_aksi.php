@@ -43,12 +43,8 @@ elseif($st==2){
     $_SESSION["level"]=$row['level'];
     header('Location: '. BASE_URL. "/user");
 }
-<<<<<<< HEAD
-elseif($st==3){    
-=======
+
 elseif($st==3){
-    
->>>>>>> a20838757a5a5bc9707e73b78e55ac3f837a4ed3
     $_SESSION["id"]=$id_user;
     $_SESSION["username"]=$row['username'];
     $_SESSION["level"]=$row['level'];

@@ -1,14 +1,7 @@
 
-<?php include 'header.php';
-?>
-
-<div class="container">
-	<div class="row">
-		<div class="col-md-7 col-md-offset-3" style="margin-top: 30px">
-			<h2 class="text-center">Dompet</h2>
-			<div class="panel panel-default">
-			  <!-- Default panel contents -->
-			  <div class="panel-heading">Daftar Sampah</div>
+<div class="panel panel-primary">
+                <div class="panel-heading"><h1>Dompet Sampah</h1></div>
+                <div class="panel-body">
 
 			  <!-- Table -->
 			  <table class="table table-bordered">
@@ -51,8 +44,4 @@ $no++;
 ?>
 			  </table>
 			</div>
-		</div>
-	</div>
-</div>	
 
-<?php include 'footer.php' ?>
