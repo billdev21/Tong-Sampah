@@ -12,19 +12,28 @@
 
 <?php
 
-function create_random($length)
+//membuat angka acak tiket
+//fungsi nomor kode otomatis
+function buatkode($nomor_terakhir, $kunci, $jumlah_karakter = 0)
 {
-    $data = 'ABCDEFGHIJKLMNOPQRSTU1234567890';
-    $string = '';
-    for($i = 0; $i < $length; $i++) {
-        $pos = rand(0, strlen($data)-1);
-        $string .= $data{$pos};
-    }
-    return $string;
+//menambahkan nomor baru
+$nomor_baru = intval(substr($nomor_terakhir, strlen($kunci))) + 1;
+//menambahkan nol didepan nomor baru sesuai panjang jumlah karakter
+$nomor_baru_plus_nol = str_pad($nomor_baru, $jumlah_karakter, "0", STR_PAD_LEFT);
+//menyusun kunci dan nomor baru
+$kode = $kunci.$nomor_baru_plus_nol;
+return $kode;
 }
 
-$etiket=create_random(4);
-
+$tgl=date('m');
+//pengambilan record terakhir
+$s_tiket = "SELECT max(etiket) AS tiket_baru FROM data_sampah";
+$q_tiket  = mysqli_query($conn,$s_tiket);
+$v_tiket= mysqli_fetch_array($q_tiket);
+$newtiket=substr($v_tiket['tiket_baru'],3);
+$nomor_terakhir = $newtiket;
+$etiket=buatkode($nomor_terakhir, $tgl ,3);
+//out put : 16.0001
 
 ?>
 
@@ -47,7 +56,7 @@ $etiket=create_random(4);
                       <div class="input-group">
                         <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></span>                    
 							
-            						<select class="form-control" name="id_kat" required>
+            						<select class="form-control" name="id_kat">
                           <option value="">Pilih Kategori</option>
                           <option value="">------------------</option>
 

@@ -24,7 +24,7 @@ $nomor_baru = intval(substr($nomor_terakhir, strlen($kunci))) + 1;
 //menambahkan nol didepan nomor baru sesuai panjang jumlah karakter
 $nomor_baru_plus_nol = str_pad($nomor_baru, $jumlah_karakter, "0", STR_PAD_LEFT);
 //menyusun kunci dan nomor baru
-$kode = $kunci.$nomor_baru_plus_nol;
+$kode = $kunci.'.'.$nomor_baru_plus_nol;
 return $kode;
 }
 

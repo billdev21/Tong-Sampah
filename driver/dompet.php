@@ -1,6 +1,5 @@
 
-<?php include 'header.php';
-?>
+<?php include 'header.php' ?>
 
 <div class="container">
 	<div class="row">
@@ -16,15 +15,13 @@
 			    	<th>No</th>
 			    	<th>E-Tiket</th>
 			    	<th>Jenis Sampah</th>
-			    	<th>Keterangan</th>
-
 			    	<th>Berat Sampah</th>
 			    	<th>Status</th>
 			    </tr>
 
 <?php
 $no=0;
-$s_sampah = "SELECT * FROM data_sampah,kategori WHERE data_sampah.id_kat=kategori.id_kat and data_sampah.id_user='$id' ";
+$s_sampah = "SELECT * FROM data_sampah,kategori WHERE data_sampah.id_kat=kategori.id_kat ";
 $q_sampah = mysqli_query($conn,$s_sampah);
 while ($td = mysqli_fetch_assoc($q_sampah)){
 $no++;
@@ -34,7 +31,6 @@ $no++;
 			    	<td><?php echo $no; ?></td>
 			    	<td><?php echo $td['etiket']; ?></td>
 			    	<td><?php echo $td['nama_kat']; ?></td>
-			    	<td><?php echo $td['ket']; ?></td>			    	
 			    	<td><?php echo $td['berat']; ?></td>
 			    	<td><?php 
 			    	$st=$td['status']; 
