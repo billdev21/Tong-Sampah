@@ -1,6 +1,9 @@
 <?php 
 session_start();
-$id=$_SESSION['id'];
+if(isset($_SESSION['id'])){
+	$id=$_SESSION['id'];	
+}
+
 
 define("BASE_URL", "http://localhost/Tong-Sampah");
 

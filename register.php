@@ -1,7 +1,5 @@
 <?php include "header.php"; ?>
 
-
-
         <div class="container" style="margin-top: 40px">
           <div class="row">            
               <?php if(isset($_GET['pesan']) != "" ): ?>

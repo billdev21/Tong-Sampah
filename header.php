@@ -32,7 +32,12 @@ include 'core/api.php' ;
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.php">Beranda</a></li>
         <li><a href="tentang.php">Tentang</a></li>
+        <?php if(!isset($_SESSION['id'])): ?>
         <li><a href="login.php">Login or Register</a></li>        
+      <?php endif ?>
+      <?php if(isset($_SESSION['id'])): ?>
+        <li><a href="user/">Profile</a></li>
+      <?php endif ?>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

@@ -21,7 +21,7 @@
 
 <?php
 $no=0;
-$s_sampah = "SELECT * FROM data_sampah,kategori WHERE data_sampah.id_kat=kategori.id_kat ";
+$s_sampah = "SELECT * FROM data_sampah,kategori, user WHERE data_sampah.id_kat=kategori.id_kat AND user.id_user = $id AND data_sampah.id_user = $id";
 $q_sampah = mysqli_query($conn,$s_sampah);
 while ($td = mysqli_fetch_assoc($q_sampah)){
 $no++;

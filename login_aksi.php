@@ -31,9 +31,10 @@ $st = $row['level'];
 
 
 if($st == 1){
-    die('admin');
+    
     $_SESSION["id"]=$id_user;
     $_SESSION["username"]=$row['username'];
+    header('Location: '. BASE_URL. "/admin");
 }
 elseif($st==2){    
     $_SESSION["id"]=$id_user;
@@ -41,9 +42,10 @@ elseif($st==2){
     header('Location: '. BASE_URL. "/user");
 }
 elseif($st==3){
-    die('driver');
+    
     $_SESSION["id"]=$id_user;
     $_SESSION["username"]=$row['username'];
+    header('Location: '. BASE_URL. "/driver");
 }
 else{
     die('gagal');
