@@ -1,5 +1,4 @@
 <?php include "header.php"; ?>
-<?php include "../core/helper.php" ?>
 
         <div class="clearfix"></div>
         <div class="container" style="margin-top: 80px">

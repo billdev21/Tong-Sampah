@@ -1,4 +1,6 @@
+<?php include '../core/helper.php' ?>
 <?php include '../core/koneksi.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,8 +52,6 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
 
           <ul class="dropdown-menu">
-            <li><a href="tambah_sampah.php">Tambah Sampah</a></li>
-            <li><a href="dompet.php">Dompet</a></li>
             <li><a href="../logout.php">Logout</a></li>
           </ul>
         </li>     
