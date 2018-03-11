@@ -76,7 +76,7 @@
                     
                     <div class="form-group">
                       <label>Kelurahan</label>
-                      <select name="kecamatan" class="form-control">
+                      <select name="kelurahan" class="form-control">
                         <option value="">Pilih Kelurahan</option>
                         <option value="">------------------</option>
                         
