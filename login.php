@@ -4,8 +4,13 @@
         <div class="clearfix"></div>
         <div class="container" style="margin-top: 80px">
           <div class="row">
+
             <div class="col-md-3"></div>
             <div class="col-md-6">
+
+              <?php if(isset($_GET['pesan']) != "" ): ?>
+                <div class="alert alert-danger" role="alert"><?php echo $_GET['pesan'] ?></div>                    
+              <?php endif ?>
               
               <div class="panel panel-danger">
                 <div class="panel-heading"><h1>Masuk</h1><span>Silahkan login, isi username dan password yang sesuai.</span></div>
