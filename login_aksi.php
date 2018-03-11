@@ -43,15 +43,21 @@ elseif($st==2){
     $_SESSION["level"]=$row['level'];
     header('Location: '. BASE_URL. "/user");
 }
+<<<<<<< HEAD
 
 elseif($st==3){
+=======
+elseif($st==3){
+    
+>>>>>>> 4df7b4c2ce48f8e4621db7a4fa3af4ef0ea38561
     $_SESSION["id"]=$id_user;
     $_SESSION["username"]=$row['username'];
     $_SESSION["level"]=$row['level'];
     header('Location: '. BASE_URL. "/driver");
 }
 else{
-    die('gagal');
+    $pesan = "Username dan Password Salah";
+    header('Location: '. BASE_URL. "/login.php?pesan=$pesan");
 }
 
 ?>
