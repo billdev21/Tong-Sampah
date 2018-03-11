@@ -9,7 +9,7 @@ $idx=$_GET['iddom'];
             <div class="col-md-2"></div>
             <div class="col-md-8">
               
-              <div class="panel panel-success">
+              <div class="panel panel-danger">
                 <div class="panel-heading"><h1>Edit Sampah</h1></div>
                 <div class="panel-body">
                   
@@ -24,8 +24,9 @@ $idx=$_GET['iddom'];
                         <input type="text" class="form-control" id="exampleInputName1" placeholder="Berat" name="berat" required>
                       </div>
                     </div>
+                    <button type="submit" class="btn btn-danger">Edit Sampah</button>
                     </div>
-                    <button type="submit" class="btn btn-success">Edit Sampah</button>
+                    
                     
                   </form>
                 </div>
