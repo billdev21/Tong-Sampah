@@ -20,6 +20,6 @@ $result = mysqli_query($conn, $query);
 
 
 if($result){
-  header("Location: ". BASE_URL. "/user/dompet.php");
+  header("Location: ". BASE_URL. "/user/tambah_sampah.php");
 }
 

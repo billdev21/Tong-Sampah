@@ -45,13 +45,12 @@ if($_SESSION['id'] == ""){
       
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.php">Beranda</a></li>
-        <li><a href="#">Daftar Harga</a></li> 
+        <li><a href="daftar_harga.php">Daftar Harga</a></li> 
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $usr;  ?> <span class="caret"></span></a>
 
           <ul class="dropdown-menu">
             <li><a href="tambah_sampah.php">Tambah Sampah</a></li>
-            <li><a href="dompet.php">Dompet</a></li>
             <li><a href="../logout.php?x=ok">Logout</a></li>
           </ul>
         </li>     
