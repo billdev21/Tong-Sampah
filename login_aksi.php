@@ -44,15 +44,10 @@ elseif($st==2){
     header('Location: '. BASE_URL. "/user");
 }
 elseif($st==3){
-<<<<<<< HEAD
-    $_SESSION["id"]=$id_user;
-    $_SESSION["username"]=$row['username'];
-=======
     
     $_SESSION["id"]=$id_user;
     $_SESSION["username"]=$row['username'];
     $_SESSION["level"]=$row['level'];
->>>>>>> 707470989a06fce482ce510ec6f7fbbf4fd0e6b2
     header('Location: '. BASE_URL. "/driver");
 }
 else{
