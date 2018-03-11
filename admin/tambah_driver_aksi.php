@@ -13,6 +13,6 @@ $result = mysqli_query($conn, $query);
 
 
 if($result){
-  header("Location: ". BASE_URL. "/admin/index.php");
+  header("Location: ". BASE_URL. "/admin/list_driver.php");
 }
 
